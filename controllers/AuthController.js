@@ -125,10 +125,9 @@ class AuthController {
                 accessToken,
             });
         } catch (error) {
-            console.log(error);
             return res.status(500).json({
                 success: false,
-                message: 'Login failed !!!',
+                message: error,
             });
         }
     }
